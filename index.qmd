@@ -1,0 +1,40 @@
+---
+title: "Bioconductor Africa Seminar Series"
+subtitle: "Registrant geography"
+format:
+  html:
+    page-layout: full
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+This page shows aggregated country-level registration counts for the Bioconductor Africa Seminar Series, which is open to participants worldwide. The series supports the growth of the Bioconductor community in Africa.
+
+Learn more about the series: [Bioconductor Africa Seminar Series](https://training.bioconductor.org/workshops/bioc-africa-seminars/)
+
+```{r}
+source("scripts/make_registrants_map.R")
+```
+
+**Registrants:** `r total_registrants`  
+**Last updated:** `r generated_on`
+
+::: {.panel-tabset}
+
+## Africa focus
+
+```{r}
+source("scripts/make_registrants_map.R")
+interactive_map_africa
+```
+
+## Global view
+
+```{r}
+
+interactive_map_global
+```
+
+:::
