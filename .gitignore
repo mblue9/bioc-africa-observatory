@@ -13,16 +13,10 @@ _site/
 
 # Raw or potentially identifiable data
 data-raw/
-registrations/
-attendance/
 *.csv
 *.tsv
 *.xlsx
-
-# Allow explicitly safe aggregated data if added later
-!data/
-!data/aggregated/
-!data/aggregated/*.csv
+config-organisers.R
 
 # Logs / temp
 *.log
