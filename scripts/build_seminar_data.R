@@ -13,7 +13,7 @@ data_directory <- "data-raw"
 zoom_timezone <- "Europe/Dublin"
 
 shared_link_name_pattern <- "^Laurah\\b"
-include_host_in_attendance <- FALSE
+include_host_in_attendance <- TRUE
 
 # Keep organiser email addresses in an ignored local file rather than in this
 # public script. See config-organisers.example.R.
@@ -523,7 +523,6 @@ seminar_data <- seminar_data %>%
       )
     )
   )
-
 
 # -------------------------------------------------------------------------
 # Overall audience attendance and repeat engagement

@@ -1,6 +1,6 @@
 ---
 title: "Bioconductor Africa Seminar Series"
-subtitle: "Geographic reach"
+subtitle: "Reach, participation and continued engagement"
 format:
   html:
     page-layout: full
@@ -12,30 +12,48 @@ execute:
 
 ```{r}
 source("scripts/build_seminar_data.R")
+
+gwas_all_sessions <- recurring_topic_engagement %>%
+  filter(str_detect(seminar_title, "GWAS")) %>%
+  pull(attendees_all_sessions)
+
+microbiome_all_sessions <- recurring_topic_engagement %>%
+  filter(str_detect(seminar_title, "Microbiome")) %>%
+  pull(attendees_all_sessions)
 ```
 
-This page summarises the geographic reach and participation of the [Bioconductor Africa Seminar Series](https://training.bioconductor.org/seminars/bioc-africa/). The series supports the growth of the Bioconductor community in Africa while remaining open to participants worldwide.
+The [Bioconductor Africa Seminar Series](https://training.bioconductor.org/seminars/bioc-africa/) supports the growth of the Bioconductor community in Africa while remaining open to participants worldwide. This page summarises the programme's reach, participation and continued engagement.
 
 **Sessions to date:** `r total_sessions`  
 **Topics covered:** `r total_topics`  
 **Last updated:** `r generated_on`
 
-# Series registrations
+# At a glance
 
-These maps show approved registrants across all available registration reports, deduplicated by email address. Someone who registered for more than one topic, or for a recurring meeting with several sessions, is counted once.
+Across `r total_sessions` sessions, the series has attracted `r total_unique_registrants` unique registrants, with more than one-third of identifiable attendees returning for multiple sessions.
 
 **Unique registrants:** `r total_unique_registrants`  
-**Registrants represented on the map:** `r mapped_unique_registrants`
+**Unique identifiable attendees:** `r total_unique_audience_attendees`  
+**Attended two or more sessions:** `r total_repeat_session_attendees` (`r sprintf("%.1f%%", repeat_session_percentage)` of identifiable attendees)  
+**Attended two or more topics:** `r total_cross_topic_attendees` (`r sprintf("%.1f%%", cross_topic_percentage)` of identifiable attendees)
+
+# Geographic reach
+
+## Registrations
+
+These maps show registrants across all available registration reports, deduplicated by email address. Someone who registered for more than one topic, or for a recurring meeting with several sessions, is counted once.
+
+**Registrants with country information:** `r mapped_unique_registrants` of `r total_unique_registrants`
 
 ::: {.panel-tabset}
 
-## Africa focus
+### Africa focus
 
 ```{r}
 interactive_map_registrants_africa
 ```
 
-## Global view
+### Global view
 
 ```{r}
 interactive_map_registrants_global
@@ -43,32 +61,33 @@ interactive_map_registrants_global
 
 :::
 
-# Series attendance
+## Attendance
 
-These maps show identifiable audience attendees across all available sessions, deduplicated by email address. Community attendance measures exclude the organising team and known automated AI notetakers.
+These maps show identifiable attendees across all available sessions, deduplicated by email address. Known AI notetakers are excluded.
 
-Unique and repeat-attendance measures include attendees who could be matched consistently by email address. A small number of attendees without a consistent identifier are excluded from these measures.
-
-**Unique identifiable audience attendees:** `r total_unique_audience_attendees`  
-**Attendees with country information:** `r mapped_unique_audience_attendees`  
-**Attended two or more sessions:** `r total_repeat_session_attendees` (`r sprintf("%.1f%%", repeat_session_percentage)` of identifiable attendees)  
-**Attended two or more topics:** `r total_cross_topic_attendees` (`r sprintf("%.1f%%", cross_topic_percentage)` of identifiable attendees)
+**Attendees with country information:** `r mapped_unique_audience_attendees` of `r total_unique_audience_attendees`
 
 ::: {.panel-tabset}
 
-## Africa focus
+### Africa focus
 
 ```{r}
 interactive_map_attendance_africa
 ```
 
-## Global view
+### Global view
 
 ```{r}
 interactive_map_attendance_global
 ```
 
 :::
+
+# Continued engagement
+
+Multi-session topics showed strong continued engagement, including `r gwas_all_sessions` attendees who joined both GWAS sessions and `r microbiome_all_sessions` who completed all three microbiome sessions.
+
+Unique and repeat-attendance measures include attendees who could be matched consistently by email address. A small number of attendees without a consistent identifier are excluded. Repeat-attendance measures also exclude the organising team.
 
 ```{r}
 if (nrow(recurring_topic_engagement) > 0) {
@@ -87,11 +106,9 @@ if (nrow(recurring_topic_engagement) > 0) {
 }
 ```
 
-# Attendance by session
+# Participation by session
 
-Attendance is deduplicated within each session. Known AI notetakers and the host are excluded from session totals. Where country was not collected, available country information is matched by email address from registrations for other seminars.
-
-For recurring meetings, **registered by this session** is the cumulative number registered by the end of that session.
+Attendance is deduplicated within each session, with known AI notetakers excluded. For recurring meetings, registrations are cumulative up to the date of each session.
 
 ```{r}
 seminar_summary <- seminar_data %>%
@@ -100,60 +117,10 @@ seminar_summary <- seminar_data %>%
     Date = format(file_date, "%d %B %Y"),
     `Registrations by session date` = total_registrants,
     Attendees = total_attendees,
-    `Attendees represented on map` = attendees_mapped
+    `Attendees with country information` = attendees_mapped
   )
 
 knitr::kable(seminar_summary)
 ```
 
-```{r}
-#| results: asis
-
-for (i in rev(seq_len(nrow(seminar_data)))) {
-  seminar <- seminar_data[i, ]
-
-  notes <- character()
-
-  if (!seminar$country_collected) {
-    notes <- c(
-      notes,
-      paste(
-        "Country was not collected for this registration form.",
-        "Where possible, locations were matched by email address",
-        "from registrations for other seminars."
-      )
-    )
-  }
-
-  note_text <- if (length(notes) > 0) {
-    paste0(
-      "\n\n",
-      paste(notes, collapse = " "),
-      "\n\n"
-    )
-  } else {
-    "\n\n"
-  }
-
-  child_text <- paste0(
-    "\n## ", seminar$seminar_display_title, "\n\n",
-    format(seminar$file_date, "%d %B %Y"), "\n\n",
-    "**Registered by this session:** ", seminar$total_registrants, "  \n",
-    "**Attendees:** ", seminar$total_attendees, "  \n",
-    "**Represented on the map:** ", seminar$attendees_mapped,
-    note_text,
-    "### Attendees by country\n\n",
-    "```{r seminar-", i, "-africa}\n",
-    "seminar_data$map_africa[[", i, "]]\n",
-    "```\n"
-  )
-
-  cat(
-    knitr::knit_child(
-      text = child_text,
-      quiet = TRUE
-    ),
-    sep = "\n"
-  )
-}
-```
+[View individual session maps and data notes](sessions.html)

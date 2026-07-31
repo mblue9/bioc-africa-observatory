@@ -4,7 +4,21 @@
     "href": "index.html",
     "title": "Bioconductor Africa Seminar Series",
     "section": "",
-    "text": "This page summarises the geographic reach and participation of the Bioconductor Africa Seminar Series. The series supports the growth of the Bioconductor community in Africa while remaining open to participants worldwide.\nSessions to date: 5\nTopics covered: 3\nLast updated: 29 Jul 2026"
+    "text": "The Bioconductor Africa Seminar Series supports the growth of the Bioconductor community in Africa while remaining open to participants worldwide. This page summarises the programme’s reach, participation and continued engagement.\nSessions to date: 7\nTopics covered: 4\nLast updated: 31 Jul 2026"
+  },
+  {
+    "objectID": "index.html#gwas-data-analysis-using-the-genesis-package-session-2-of-2",
+    "href": "index.html#gwas-data-analysis-using-the-genesis-package-session-2-of-2",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "GWAS data analysis using the GENESIS package (Session 2 of 2)",
+    "text": "GWAS data analysis using the GENESIS package (Session 2 of 2)\n29 July 2026\nRegistered by this session: 167\nAttendees: 74\nRepresented on the map: 21\nCountry was not collected for this registration form. Where possible, locations were matched by email address from registrations for other seminars.\n\nAttendees by country"
+  },
+  {
+    "objectID": "index.html#gwas-data-analysis-using-the-genesis-package-session-1-of-2",
+    "href": "index.html#gwas-data-analysis-using-the-genesis-package-session-1-of-2",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "GWAS data analysis using the GENESIS package (Session 1 of 2)",
+    "text": "GWAS data analysis using the GENESIS package (Session 1 of 2)\n22 July 2026\nRegistered by this session: 164\nAttendees: 76\nRepresented on the map: 26\nCountry was not collected for this registration form. Where possible, locations were matched by email address from registrations for other seminars.\n\nAttendees by country"
   },
   {
     "objectID": "index.html#crispr-amplicon-analysis-with-amplican",
@@ -18,21 +32,21 @@
     "href": "index.html#orchestrating-microbiome-analysis-session-3-of-3",
     "title": "Bioconductor Africa Seminar Series",
     "section": "Orchestrating Microbiome Analysis (Session 3 of 3)",
-    "text": "Orchestrating Microbiome Analysis (Session 3 of 3)\n20 May 2026\nRegistered by this session: 176\nAttendees: 40\nRepresented on the map: 30\n\nAttendees by country"
+    "text": "Orchestrating Microbiome Analysis (Session 3 of 3)\n20 May 2026\nRegistered by this session: 176\nAttendees: 41\nRepresented on the map: 31\n\nAttendees by country"
   },
   {
     "objectID": "index.html#orchestrating-microbiome-analysis-session-2-of-3",
     "href": "index.html#orchestrating-microbiome-analysis-session-2-of-3",
     "title": "Bioconductor Africa Seminar Series",
     "section": "Orchestrating Microbiome Analysis (Session 2 of 3)",
-    "text": "Orchestrating Microbiome Analysis (Session 2 of 3)\n13 May 2026\nRegistered by this session: 171\nAttendees: 49\nRepresented on the map: 48\n\nAttendees by country"
+    "text": "Orchestrating Microbiome Analysis (Session 2 of 3)\n13 May 2026\nRegistered by this session: 171\nAttendees: 50\nRepresented on the map: 49\n\nAttendees by country"
   },
   {
     "objectID": "index.html#orchestrating-microbiome-analysis-session-1-of-3",
     "href": "index.html#orchestrating-microbiome-analysis-session-1-of-3",
     "title": "Bioconductor Africa Seminar Series",
     "section": "Orchestrating Microbiome Analysis (Session 1 of 3)",
-    "text": "Orchestrating Microbiome Analysis (Session 1 of 3)\n06 May 2026\nRegistered by this session: 151\nAttendees: 65\nRepresented on the map: 64\n\nAttendees by country"
+    "text": "Orchestrating Microbiome Analysis (Session 1 of 3)\n06 May 2026\nRegistered by this session: 151\nAttendees: 66\nRepresented on the map: 65\n\nAttendees by country"
   },
   {
     "objectID": "index.html#introduction-to-bioconductor",
@@ -40,5 +54,75 @@
     "title": "Bioconductor Africa Seminar Series",
     "section": "Introduction to Bioconductor",
     "text": "Introduction to Bioconductor\n15 April 2026\nRegistered by this session: 196\nAttendees: 50\nRepresented on the map: 21\nCountry was not collected for this registration form. Where possible, locations were matched by email address from registrations for other seminars.\n\nAttendees by country"
+  },
+  {
+    "objectID": "index.html#registrations",
+    "href": "index.html#registrations",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "Registrations",
+    "text": "Registrations\nThese maps show registrants across all available registration reports, deduplicated by email address. Someone who registered for more than one topic, or for a recurring meeting with several sessions, is counted once.\nRegistrants with country information: 229 of 459\n\nAfrica focusGlobal view"
+  },
+  {
+    "objectID": "index.html#attendance",
+    "href": "index.html#attendance",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "Attendance",
+    "text": "Attendance\nThese maps show identifiable attendees across all available sessions, deduplicated by email address. Known AI notetakers are excluded.\nAttendees with country information: 126 of 229\n\nAfrica focusGlobal view"
+  },
+  {
+    "objectID": "sessions.html",
+    "href": "sessions.html",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "",
+    "text": "This page provides individual session-level attendance maps and notes on country-data availability. The programme overview summarises cumulative reach and continued engagement across the series.\nAttendance is deduplicated within each session, with known AI notetakers excluded. For recurring meetings, registered by this session is the cumulative number registered by the end of that session."
+  },
+  {
+    "objectID": "sessions.html#gwas-data-analysis-using-the-genesis-package-session-2-of-2",
+    "href": "sessions.html#gwas-data-analysis-using-the-genesis-package-session-2-of-2",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "GWAS data analysis using the GENESIS package (Session 2 of 2)",
+    "text": "GWAS data analysis using the GENESIS package (Session 2 of 2)\n29 July 2026\nRegistered by this session: 167\nAttendees: 74\nAttendees with country information: 21 of 74\nCountry was not collected in this registration form. Country information could be matched for some attendees using registrations from other seminars.\n\nAttendees by country"
+  },
+  {
+    "objectID": "sessions.html#gwas-data-analysis-using-the-genesis-package-session-1-of-2",
+    "href": "sessions.html#gwas-data-analysis-using-the-genesis-package-session-1-of-2",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "GWAS data analysis using the GENESIS package (Session 1 of 2)",
+    "text": "GWAS data analysis using the GENESIS package (Session 1 of 2)\n22 July 2026\nRegistered by this session: 164\nAttendees: 76\nAttendees with country information: 26 of 76\nCountry was not collected in this registration form. Country information could be matched for some attendees using registrations from other seminars.\n\nAttendees by country"
+  },
+  {
+    "objectID": "sessions.html#crispr-amplicon-analysis-with-amplican",
+    "href": "sessions.html#crispr-amplicon-analysis-with-amplican",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "CRISPR Amplicon Analysis with ampliCan",
+    "text": "CRISPR Amplicon Analysis with ampliCan\n17 June 2026\nRegistered by this session: 70\nAttendees: 21\nAttendees with country information: 20 of 21\n\nAttendees by country"
+  },
+  {
+    "objectID": "sessions.html#orchestrating-microbiome-analysis-session-3-of-3",
+    "href": "sessions.html#orchestrating-microbiome-analysis-session-3-of-3",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "Orchestrating Microbiome Analysis (Session 3 of 3)",
+    "text": "Orchestrating Microbiome Analysis (Session 3 of 3)\n20 May 2026\nRegistered by this session: 176\nAttendees: 41\nAttendees with country information: 31 of 41\n\nAttendees by country"
+  },
+  {
+    "objectID": "sessions.html#orchestrating-microbiome-analysis-session-2-of-3",
+    "href": "sessions.html#orchestrating-microbiome-analysis-session-2-of-3",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "Orchestrating Microbiome Analysis (Session 2 of 3)",
+    "text": "Orchestrating Microbiome Analysis (Session 2 of 3)\n13 May 2026\nRegistered by this session: 171\nAttendees: 50\nAttendees with country information: 49 of 50\n\nAttendees by country"
+  },
+  {
+    "objectID": "sessions.html#orchestrating-microbiome-analysis-session-1-of-3",
+    "href": "sessions.html#orchestrating-microbiome-analysis-session-1-of-3",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "Orchestrating Microbiome Analysis (Session 1 of 3)",
+    "text": "Orchestrating Microbiome Analysis (Session 1 of 3)\n06 May 2026\nRegistered by this session: 151\nAttendees: 66\nAttendees with country information: 65 of 66\n\nAttendees by country"
+  },
+  {
+    "objectID": "sessions.html#introduction-to-bioconductor",
+    "href": "sessions.html#introduction-to-bioconductor",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "Introduction to Bioconductor",
+    "text": "Introduction to Bioconductor\n15 April 2026\nRegistered by this session: 196\nAttendees: 50\nAttendees with country information: 21 of 50\nCountry was not collected in this registration form. Country information could be matched for some attendees using registrations from other seminars.\n\nAttendees by country"
   }
 ]
