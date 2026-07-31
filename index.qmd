@@ -30,12 +30,12 @@ The [Bioconductor Africa Seminar Series](https://training.bioconductor.org/semin
 
 # At a glance
 
-Across `r total_sessions` sessions, the series has attracted `r total_unique_registrants` unique registrants, with more than one-third of identifiable attendees returning for multiple sessions.
+Across `r total_sessions` sessions, the series has attracted `r total_unique_registrants` unique registrants, with more than one-third of unique attendees participating in multiple sessions.
 
 **Unique registrants:** `r total_unique_registrants`  
-**Unique identifiable attendees:** `r total_unique_audience_attendees`  
-**Attended two or more sessions:** `r total_repeat_session_attendees` (`r sprintf("%.1f%%", repeat_session_percentage)` of identifiable attendees)  
-**Attended two or more topics:** `r total_cross_topic_attendees` (`r sprintf("%.1f%%", cross_topic_percentage)` of identifiable attendees)
+**Unique attendees (by email address):** `r total_unique_audience_attendees`  
+**Attended two or more sessions:** `r total_repeat_session_attendees` (`r sprintf("%.1f%%", repeat_session_percentage)` of unique attendees)  
+**Attended two or more topics:** `r total_cross_topic_attendees` (`r sprintf("%.1f%%", cross_topic_percentage)` of unique attendees)
 
 # Geographic reach
 
@@ -63,7 +63,7 @@ interactive_map_registrants_global
 
 ## Attendance
 
-These maps show identifiable attendees across all available sessions, deduplicated by email address. Known AI notetakers are excluded.
+These maps show unique attendees across all available sessions, deduplicated by email address. Known AI notetakers are excluded.
 
 **Attendees with country information:** `r mapped_unique_audience_attendees` of `r total_unique_audience_attendees`
 
@@ -87,7 +87,7 @@ interactive_map_attendance_global
 
 Multi-session topics showed strong continued engagement, including `r gwas_all_sessions` attendees who joined both GWAS sessions and `r microbiome_all_sessions` who completed all three microbiome sessions.
 
-Unique and repeat-attendance measures include attendees who could be matched consistently by email address. A small number of attendees without a consistent identifier are excluded. Repeat-attendance measures also exclude the organising team.
+Unique and repeat-attendance measures are based on attendees who could be identified consistently by email address. A small number of attendees without a consistent identifier are excluded. Repeat-attendance measures also exclude the organising team.
 
 ```{r}
 if (nrow(recurring_topic_engagement) > 0) {
