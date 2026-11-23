@@ -128,7 +128,7 @@ make_country_map <- function(
   }
 
   map <- leaflet(map_data) %>%
-    addProviderTiles("CartoDB.Positron") %>%
+    addTiles() %>%
     addPolygons(
       fillColor = ~fill_colour,
       fillOpacity = 0.85,
@@ -159,7 +159,23 @@ make_country_map <- function(
           count_label,
           "per country"
         ),
-        position = "bottomright"
+        position = "bottomright",
+        labFormat = function(type, cuts, p) {
+          if (type == "bin") {
+            labels <- paste0(
+              cuts[-length(cuts)],
+              " – ",
+              cuts[-1]
+            )
+            labels[length(labels)] <- paste0(
+              cuts[length(cuts) - 1],
+              "+"
+            )
+            labels
+          } else {
+            leaflet::labelFormat()(type, cuts, p)
+          }
+        }
       )
   }
 
