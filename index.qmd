@@ -12,6 +12,7 @@ execute:
 
 ```{r}
 source("scripts/build_seminar_data.R")
+source("scripts/build_career_stage_data.R")
 
 gwas_all_sessions <- recurring_topic_engagement %>%
   filter(str_detect(seminar_title, "GWAS")) %>%
@@ -104,6 +105,27 @@ if (nrow(recurring_topic_engagement) > 0) {
     caption = "Engagement within recurring topic series"
   )
 }
+```
+
+# Early-career participation
+
+Career-stage information was collected for seminar registrations from `r format(career_data_start_date, "%B %Y")` onwards. Each person is counted once, using their most recent response where they registered for more than one seminar.
+
+**Among attendees with an ECR response:** `r ecr_attendee_yes` of `r ecr_attendee_respondents` were early-career researchers (`r sprintf("%.1f%%", ecr_attendee_percentage)`).  
+**Among registrants with an ECR response:** `r ecr_yes` of `r ecr_respondents` were early-career researchers (`r sprintf("%.1f%%", ecr_percentage)`).
+
+```{r}
+career_stage_attendee_display <- career_stage_attendee_summary %>%
+  transmute(
+    `Career stage` = career_stage,
+    People = people,
+    Percentage = sprintf("%.1f%%", percentage)
+  )
+
+knitr::kable(
+  career_stage_attendee_display,
+  caption = "Career stage among attendees who provided this information"
+)
 ```
 
 # Participation by session

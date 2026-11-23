@@ -51,7 +51,8 @@ read_registration_report <- function(file, timezone) {
   registration_data <- read_csv(
     file,
     skip = 5,
-    show_col_types = FALSE
+    show_col_types = FALSE,
+    name_repair = "unique"
   )
 
   required_columns <- c("Email", "Registration Time")
@@ -69,6 +70,29 @@ read_registration_report <- function(file, timezone) {
 
   country_collected <- "Country/Region" %in% names(registration_data)
 
+  career_stage_column <- names(registration_data)[
+    str_detect(
+      names(registration_data),
+      regex(
+        "^Which best describes your current role or career stage",
+        ignore_case = TRUE
+      )
+    )
+  ]
+
+  ecr_column <- names(registration_data)[
+    str_detect(
+      names(registration_data),
+      regex(
+        "^Do you consider yourself an early-career researcher\\?",
+        ignore_case = TRUE
+      )
+    )
+  ]
+
+  career_stage_collected <- length(career_stage_column) > 0
+  ecr_collected <- length(ecr_column) > 0
+
   if (!country_collected) {
     message(
       basename(file),
@@ -77,6 +101,26 @@ read_registration_report <- function(file, timezone) {
 
     registration_data <- registration_data %>%
       mutate(`Country/Region` = NA_character_)
+  }
+
+  # Create safe temporary columns for optional questions before transmute().
+  # This avoids trying to index a column name that does not exist.
+  if (career_stage_collected) {
+    registration_data$.career_stage_value <-
+      as.character(
+        registration_data[[career_stage_column[[1]]]]
+      )
+  } else {
+    registration_data$.career_stage_value <- NA_character_
+  }
+
+  if (ecr_collected) {
+    registration_data$.ecr_response_value <-
+      as.character(
+        registration_data[[ecr_column[[1]]]]
+      )
+  } else {
+    registration_data$.ecr_response_value <- NA_character_
   }
 
   if ("Approval Status" %in% names(registration_data)) {
@@ -115,7 +159,21 @@ read_registration_report <- function(file, timezone) {
         str_trim() %>%
         str_to_upper() %>%
         na_if(""),
-      country_collected = country_collected
+      country_collected = country_collected,
+      career_stage = .career_stage_value,
+      career_stage_collected = career_stage_collected,
+      ecr_response = .ecr_response_value,
+      ecr_collected = ecr_collected
+    ) %>%
+    mutate(
+      career_stage = na_if(
+        str_squish(career_stage),
+        ""
+      ),
+      ecr_response = na_if(
+        str_squish(ecr_response),
+        ""
+      )
     ) %>%
     filter(!is.na(email)) %>%
     group_by(email) %>%
@@ -128,6 +186,10 @@ read_registration_report <- function(file, timezone) {
         reported_country_code
       ),
       country_collected = first(country_collected),
+      career_stage = first_non_missing(career_stage),
+      career_stage_collected = first(career_stage_collected),
+      ecr_response = first_non_missing(ecr_response),
+      ecr_collected = first(ecr_collected),
       .groups = "drop"
     )
 }
@@ -198,9 +260,6 @@ read_participant_report <- function(file, notetaker_pattern) {
     nrow(excluded_notetakers),
     " possible AI notetaker row(s)."
   )
-
-  # The excluded rows remain available in the returned object for manual
-  # inspection, but are not printed during Quarto rendering.
 
   list(
     participants = included_participants,
