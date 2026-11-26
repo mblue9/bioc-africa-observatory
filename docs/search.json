@@ -4,21 +4,21 @@
     "href": "index.html",
     "title": "Bioconductor Africa Seminar Series",
     "section": "",
-    "text": "The Bioconductor Africa Seminar Series supports the growth of the Bioconductor community in Africa while remaining open to participants worldwide. This page summarises the programme’s reach, participation and continued engagement.\nSessions to date: 11\nTopics covered: 7\nLast updated: 23 Nov 2026"
+    "text": "The Bioconductor Africa Seminar Series supports the growth of the Bioconductor community in Africa while remaining open to participants worldwide. This page summarises the programme’s reach, participation and continued engagement.\nSessions to date: 12\nTopics covered: 8\nLast updated: 26 Nov 2026"
   },
   {
     "objectID": "index.html#registrations",
     "href": "index.html#registrations",
     "title": "Bioconductor Africa Seminar Series",
     "section": "Registrations",
-    "text": "Registrations\nThese maps show registrants across all available registration reports, deduplicated by email address. Someone who registered for more than one topic, or for a recurring meeting with several sessions, is counted once.\nRegistrants with country information: 467 of 657\n\nAfrica focusGlobal view"
+    "text": "Registrations\nThese maps show registrants across all available registration reports, deduplicated by email address. Someone who registered for more than one topic, or for a recurring meeting with several sessions, is counted once.\nRegistrants with country information: 500 of 684\n\nAfrica focusGlobal view"
   },
   {
     "objectID": "index.html#attendance",
     "href": "index.html#attendance",
     "title": "Bioconductor Africa Seminar Series",
     "section": "Attendance",
-    "text": "Attendance\nThese maps show unique attendees across all available sessions, deduplicated by email address. Known AI notetakers are excluded.\nAttendees with country information: 254 of 331\n\nAfrica focusGlobal view"
+    "text": "Attendance\nThese maps show unique attendees across all available sessions, deduplicated by email address. Known AI notetakers are excluded.\nAttendees with country information: 268 of 342\n\nAfrica focusGlobal view"
   },
   {
     "objectID": "sessions.html",
@@ -26,6 +26,13 @@
     "title": "Bioconductor Africa Seminar Series",
     "section": "",
     "text": "This page provides individual session-level attendance maps and notes on country-data availability. The programme overview summarises cumulative reach and continued engagement across the series.\nAttendance is deduplicated within each session, with known AI notetakers excluded. For recurring meetings, registered by this session is the cumulative number registered by the end of that session."
+  },
+  {
+    "objectID": "sessions.html#reproducible-workflows-with-rbioconductor-and-quarto",
+    "href": "sessions.html#reproducible-workflows-with-rbioconductor-and-quarto",
+    "title": "Bioconductor Africa Seminar Series",
+    "section": "Reproducible workflows with R/Bioconductor and Quarto",
+    "text": "Reproducible workflows with R/Bioconductor and Quarto\n25 November 2026\nRegistered by this session: 74\nAttendees: 27\nAttendees with country information: 26 of 27\n\nAttendees by country"
   },
   {
     "objectID": "sessions.html#how-to-develop-and-submit-a-package-to-bioconductor",
@@ -60,14 +67,14 @@
     "href": "sessions.html#gwas-data-analysis-using-the-genesis-package-session-2-of-2",
     "title": "Bioconductor Africa Seminar Series",
     "section": "GWAS data analysis using the GENESIS package (Session 2 of 2)",
-    "text": "GWAS data analysis using the GENESIS package (Session 2 of 2)\n29 July 2026\nRegistered by this session: 167\nAttendees: 74\nAttendees with country information: 39 of 74\nCountry was not collected in this registration form. Country information could be matched for some attendees using registrations from other seminars.\n\nAttendees by country"
+    "text": "GWAS data analysis using the GENESIS package (Session 2 of 2)\n29 July 2026\nRegistered by this session: 167\nAttendees: 74\nAttendees with country information: 42 of 74\nCountry was not collected in this registration form. Country information could be matched for some attendees using registrations from other seminars.\n\nAttendees by country"
   },
   {
     "objectID": "sessions.html#gwas-data-analysis-using-the-genesis-package-session-1-of-2",
     "href": "sessions.html#gwas-data-analysis-using-the-genesis-package-session-1-of-2",
     "title": "Bioconductor Africa Seminar Series",
     "section": "GWAS data analysis using the GENESIS package (Session 1 of 2)",
-    "text": "GWAS data analysis using the GENESIS package (Session 1 of 2)\n22 July 2026\nRegistered by this session: 164\nAttendees: 76\nAttendees with country information: 42 of 76\nCountry was not collected in this registration form. Country information could be matched for some attendees using registrations from other seminars.\n\nAttendees by country"
+    "text": "GWAS data analysis using the GENESIS package (Session 1 of 2)\n22 July 2026\nRegistered by this session: 164\nAttendees: 76\nAttendees with country information: 43 of 76\nCountry was not collected in this registration form. Country information could be matched for some attendees using registrations from other seminars.\n\nAttendees by country"
   },
   {
     "objectID": "sessions.html#crispr-amplicon-analysis-with-amplican",
